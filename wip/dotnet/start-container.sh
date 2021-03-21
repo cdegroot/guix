@@ -9,7 +9,6 @@ guix environment --container --network --link-profile \
     --expose=$GUIX_PROFILE/bin/bash=/bin/bash \
     --expose=$scriptdir=/dotnet-build \
     --ad-hoc -e '(@ (gnu) %base-packages))' \
-              guix \
               cmake make clang python glibc-utf8-locales git curl bash openssl wget nss-certs patchelf binutils \
-              icu4c libunwind liburcu lttng-ust linux-libre-headers \
+              glibc icu4c libunwind liburcu lttng-ust linux-libre-headers \
     -- bash
