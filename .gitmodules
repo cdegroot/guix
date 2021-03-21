@@ -1,0 +1,4 @@
+[submodule "wip/dotnet/source-build"]
+	path = wip/dotnet/source-build
+	url = https://github.com/dotnet/source-build
+	branch = release/5.0

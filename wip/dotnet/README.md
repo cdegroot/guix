@@ -14,3 +14,5 @@ To download and patch the bootstrap binary, and
     build-dotnet.sh
 
 To build dotnet.
+
+I'm building against the `release/5.0` branch, commit id `c13177f2205e4eb8e19e08ac45889b793edc9a2d`
