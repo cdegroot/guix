@@ -16,6 +16,9 @@ To download and patch the bootstrap binary, and
 
 To build dotnet.
 
+* TODO: the build script starts downloading the binaries again, so the order now is "setup", "build",
+  "setup", "build". Figure out the proper steps.
+
 I'm building against the `release/5.0` branch, commit id `c13177f2205e4eb8e19e08ac45889b793edc9a2d`
 
 The dotnet source repo is checked out under `~/tmp` by default, which is a totally non-standard
