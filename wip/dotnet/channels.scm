@@ -4,12 +4,13 @@
 
 (list
      ;; Note: these other commits were also used to install some of the packages in this profile:
+     ;;   "d4e29f3628ad0c7576d7cab659d7fcc19d21999a"
      ;;   "15423d38c57d04bc1bbc70c7bd79eaf8cf82d513"
      (channel
        (name 'guix)
        (url "https://git.savannah.gnu.org/git/guix.git")
        (commit
-         "d4e29f3628ad0c7576d7cab659d7fcc19d21999a")
+         "5adfaa6853213c7125f1dcac378b7c8f77c97ef3")
        (introduction
          (make-channel-introduction
            "9edb3f66fd807b096b48283debdcddccfea34bad"
