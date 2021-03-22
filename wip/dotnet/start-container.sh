@@ -13,7 +13,7 @@ guix environment --container --network --link-profile \
     --expose=$GUIX_PROFILE/bin/bash=/bin/bash \
     --expose=$scriptdir=/build \
     --ad-hoc -e '(@ (gnu) %base-packages))' -e '(list (@ (gnu packages gcc) gcc-10) "lib")'\
-              cmake make clang-toolchain python glibc-utf8-locales git curl \
+              cmake make clang-toolchain python glibc-locales git curl \
                 bash openssl wget nss-certs patchelf mit-krb5 \
               glibc icu4c libunwind liburcu lttng-ust linux-libre-headers \
     -- bash
