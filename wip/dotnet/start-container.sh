@@ -5,8 +5,8 @@ set -e
 scriptdir=$(cd $(dirname $0); pwd)
 cd $sourcedir
 rm -f .guix-gc-root
-#guix time-machine -C $scriptdir/channels.scm --
-guix environment --container --network --link-profile \
+guix time-machine -C $scriptdir/channels.scm -- \
+  environment --container --network --link-profile \
     --root=.guix-gc-root \
     --pure \
     --expose=$GUIX_PROFILE/bin/env=/usr/bin/env \
