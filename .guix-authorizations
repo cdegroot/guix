@@ -1,0 +1,5 @@
+;; -*- mode: scheme; -*-
+(authorizations
+ (version 0)
+ (("C165 F320 536F 922A 23CF  8E8F DC4C 7142 A47C 86BC"
+   (name "cdegroot"))))
