@@ -1,8 +1,7 @@
-;; Work in progress. While it installs and starts, it doesn't actually run yet.
-;; Todo once it runs:
-;; - install everything in libexec or something
-;; - wrapper script in bin
+;; Todo:
 ;; - Gnome desktop entry
+;; - Think more about wine integration, patching config file instead of write-once which
+;;   will break horribly.
 (define-module (cdg eve)
   #:use-module (gnu packages base)
   #:use-module (gnu packages compression)
@@ -71,30 +70,11 @@
                    (lambda (p)
                      (format p "\
 #!~a
-if [ -f ~~/.config/CCP/EVE.conf ]
-then
-  echo
-  echo ~~/.config/CCP/EVE.conf already exists, not overwriting.
-  echo
-  echo Please make sure you use current wine, the launcher comes with a pretty old version.
-  echo
-  echo Wine path could be ~a
-  echo '                or' $GUIX_PROFILE/bin/wine
-  echo
-else
-  mkdir -p ~~/.config/CCP
-  cat >~~/.config/CCP/EVE.conf <<EOF
-[General]
-UseCustomWine=true
-CustomWinePath=~a
-EOF
-fi
 export QT_PLUGIN_PATH=~a
 export QTWEBENGINEPROCESS_PATH=~a
 exec ~a
 "
                            (which "bash")
-                           (which "wine") (which "wine")
                            (getenv "QT_PLUGIN_PATH")
                            (getenv "QTWEBENGINEPROCESS_PATH")
                            real-script)))
