@@ -89,10 +89,14 @@ UseCustomWine=true
 CustomWinePath=~a
 EOF
 fi
+export QT_PLUGIN_PATH=~a
+export QTWEBENGINEPROCESS_PATH=~a
 exec ~a
 "
                            (which "bash")
                            (which "wine") (which "wine")
+                           (getenv "QT_PLUGIN_PATH")
+                           (getenv "QTWEBENGINEPROCESS_PATH")
                            real-script)))
                  (chmod wrapper #o555))))
            (add-before 'patchelf 'patchelf-writable
