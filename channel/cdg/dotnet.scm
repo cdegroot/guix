@@ -117,7 +117,8 @@
                  ;; First symlink, then wrap-program: dotnet cannot run when renamed
                  (wrap-program dotnet-dest
                    ;; Ensure the `dotnet' program does not phone home to share telemetry
-                   `("DOTNET_CLI_TELEMETRY_OPTOUT" = ("1")))))))))
+                   `("DOTNET_CLI_TELEMETRY_OPTOUT" = ("1"))
+                   `("DOTNET_SYSTEM_GLOBALIZATION_INVARIANT" = ("1")))))))))
       (native-search-paths
        (list (search-path-specification
               (variable "DOTNET_ROOT")
