@@ -1,4 +1,8 @@
 ;; TODO: actually be selective instead of copy the whole thing over
+;; TODO: patch scripts so plugins are under asdf_dir instead of asdf_data_dir
+;; TODO: add plugins. They should all land under a common directory
+;;       that is added to GUIX_PROFILE. Probably using a common function it
+;;       can be super quick.
 (define-module (cdg asdf-vm)
   #:use-module (guix packages)
   #:use-module (guix git-download)
