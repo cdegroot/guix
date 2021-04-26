@@ -9,14 +9,14 @@
 (define-public stackery
   (package
     (name "stackery")
-    (version "5.1.0")
+    (version "5.1.1")
     (source
      (origin
        (method url-fetch/executable)
        (uri (string-append "https://ga.cli.stackery.io/linux/stackery"))
        (file-name "stackery.gz")
        (sha256
-        (base32 "14345qn0qi3vladjjzk3pfr1hcc29b5hxj5ywxcrqk0rdfkdl9ja"))))
+        (base32 "0nj99rb8280zpsipsidg6d4l7sd4qnhgrxgg4lmf1sbnjwp2rv4k"))))
     (build-system copy-build-system)
     (arguments
      '(#:install-plan '(("stackery" "bin/"))
