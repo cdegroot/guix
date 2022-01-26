@@ -10,4 +10,4 @@ fi
 tmpfile=`mktemp`
 (cat $1; echo; echo $2) >$tmpfile
 guix build -K -f $tmpfile
-#guix package -f $tmpfile
+echo "Use 'guix package -f $tmpfile' to install as a package"

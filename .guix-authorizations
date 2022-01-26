@@ -1,5 +1,5 @@
 ;; -*- mode: scheme; -*-
 (authorizations
  (version 0)
- (("C165 F320 536F 922A 23CF  8E8F DC4C 7142 A47C 86BC"
-   (name "cdegroot"))))
+ (("C165 F320 536F 922A 23CF  8E8F DC4C 7142 A47C 86BC" (name "cdegroot-main"))
+  ("0CA87D84215701F5DC984D6D2A3EE5731416A604" (name "cdegroot-signing-subkey"))))
