@@ -72,11 +72,14 @@
 #!~a
 export QT_PLUGIN_PATH=~a
 export QTWEBENGINEPROCESS_PATH=~a
+# This should not be needed... but it smells like patchelf doesn't do all that's needed.
+export LD_LIBRARY_PATH=~a
 exec ~a
 "
                            (which "bash")
                            (getenv "QT_PLUGIN_PATH")
                            (getenv "QTWEBENGINEPROCESS_PATH")
+                           (assoc-ref inputs "qtbase")
                            real-script)))
                  (chmod wrapper #o555))))
            (add-before 'patchelf 'patchelf-writable
